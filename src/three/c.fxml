@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="550.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="three.cController">
+    <children>
+        <Label layoutX="173.0" layoutY="31.0" text="假設丟擲 3 粒公平的骰子">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="134.0" layoutY="58.0" text="X為最小的點數而Y為最大的點數">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField layoutX="225.0" layoutY="202.0" prefWidth="55.0" fx:id="x" />
+        <TextField fx:id="y" layoutX="313.0" layoutY="202.0" prefWidth="55.0" AnchorPane.rightAnchor="182.0" />
+        <Label layoutX="201.0" layoutY="202.0" text="X:" AnchorPane.leftAnchor="201.0">
+            <padding>
+                <Insets right="5.0" />
+            </padding>
+        </Label>
+        <Label layoutX="285.0" layoutY="202.0" text="Y:">
+            <padding>
+                <Insets right="5.0" />
+            </padding>
+        </Label>
+        <Button layoutX="134.0" layoutY="301.0" mnemonicParsing="false" onAction="#setIn" text="START" />
+        <Button fx:id="back" layoutX="369.0" layoutY="301.0" mnemonicParsing="false" onAction="#back" text="BACK" />
+        <Label layoutX="225.0" layoutY="365.0" text="P=">
+            <padding>
+                <Insets right="5.0" />
+            </padding>
+        </Label>
+        <TextField fx:id="p" layoutX="257.0" layoutY="365.0" prefWidth="55.0" />
+    </children>
+    <padding>
+        <Insets right="5.0" />
+    </padding>
+</AnchorPane>

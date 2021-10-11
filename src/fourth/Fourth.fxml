@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fourth.FourthController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="因此參數:λ=1.5">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label text="按下START後將計算3分內一通電話都沒有的機率" GridPane.columnIndex="1">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label text="假設某公司電話大約每小時30通" GridPane.valignment="TOP">
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="start" mnemonicParsing="false" onAction="#SetIn" text="START" GridPane.rowIndex="1" />
+      <Button fx:id="back" mnemonicParsing="false" onAction="#back" text="BACK" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <children>
+            <Label layoutX="118.0" layoutY="54.0" text="機率:">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="resProbability" layoutX="169.0" layoutY="56.0" prefWidth="55.0" />
+            <Label layoutX="227.0" layoutY="54.0" text="標準差:">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="resSD" layoutX="298.0" layoutY="56.0" prefWidth="55.0" />
+            <Label layoutX="356.0" layoutY="54.0" text="期望值:">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="resExpectation" layoutX="427.0" layoutY="56.0" prefWidth="55.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
